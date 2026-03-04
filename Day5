@@ -1,0 +1,30 @@
+STEPS TAKEN
+I used the command, <sudo adduser sam> to create a secure account for the intern and ensure proper system access control.
+I used the command, <sudo passwd sam> to set password,  Sam#123 , for sam
+
+I created the group, interns using the command,  <sudo groupadd interns>
+I used the command, <getent group interns> to confirm if the group, interns was created.
+
+I used the command, <sudo usermod -aG interns sam> to add sam to the interns group
+Importance: Grants Sam access to shared resources assigned to the interns group. The -aG is very important:
+•	-a = append (keeps existing groups)
+•	-G = specify group
+I used the command, <id sam> to verify if sam was added to the interns group.
+I used <sudo chown :interns tmp >to change the group ownership to interns.
+I used the command, < sudo chmod 750 tmp> to give read & execute permission to the group, interns. 
+•	7 → Owner = read, write, execute
+•	5 → Group (interns) = read, execute (read-only access)
+•	0 → Others = no access
+
+Group was give execute permission because Folders need execute (x) permission to be opened/accessed.
+I used the command, <ls –ld> to confirm the permission
+I ran <git add Day5> command to stage Day5 file
+I ran <git commit -m "Create a New User, Sam"> to commit Day5 file
+I used <git push> to push the file to my remote repo on github
+
+
+CHALLENGES
+Struggled with copying the file, Day5 from the cloned directory but I figured it out. I used the command, cp linux/Day5 . while at the path, Linux
+I created a password for Sam instead of using the password that we were instructed to use by our instructor. I reset the password with the command,  sudo passwd sam. I was prompted to enter a new password, then confirm it and the old password was automatically replaced.
+
+
