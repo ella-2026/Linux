@@ -1,0 +1,20 @@
+Task 6
+Rename your task files from Day1 to Task1 in that order till Day6 to Task6
+Create an AWS account using this link  https://aws.amazon.com/
+Download an MFA device on your phone - Google Authenticator or Microsoft Authenticator
+
+STEPS TO RENAME FILES
+I used this command to rename my files, for i in {1..6}; do
+  mv "Day$i" "Task$i"
+done
+
+
+How it works:
+
+for i in {1..6}; do → loops i from 1 to 6
+
+mv "Day$i" "Task$i" → renames Day1 → Task1, Day2 → Task2, etc.
+
+done → ends the loop
+
+I used the command, ls to confirm if the files were successfully renamed
